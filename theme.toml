@@ -1,0 +1,11 @@
+name = "Simple Frame"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Minimal Hugo theme."
+homepage = "https://github.com/Dim0000/simple-frame"
+tags = ["blog", "minimal"]
+features = ["responsive", "search", "syntax highlighting", "math"]
+min_version = "0.120"
+
+[author]
+  name = "Dim0000"

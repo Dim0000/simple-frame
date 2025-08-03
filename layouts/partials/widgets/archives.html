@@ -1,0 +1,11 @@
+<div class="widget-archives widget">
+  <h2 class="widget__title">{{ T "categories_title" | default "Archives" }}</h2>
+  <div class="widget__content">
+    <select onChange="location.href=value;">
+      <option>{{ T "archives_select_month" | default "Select Month" }}</option>
+      {{ range $items := .Site.Taxonomies.archives.Alphabetical.Reverse }}
+      <option value="/archives/{{ .Name | urlize | lower }}">{{ .Name }} ({{ .Count }})</option>
+      {{ end }}
+    </select>
+  </div>
+</div>

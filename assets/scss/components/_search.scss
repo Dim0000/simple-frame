@@ -1,0 +1,20 @@
+.search__input {
+  margin-bottom: 1rem;
+}
+
+.search__item--title {
+  text-decoration: none;
+  color: $highlight-color;
+  font-weight: bolder;
+}
+
+.search__item--excerpt {
+  margin: 0.5rem 2rem 1rem;
+  padding: 0.5rem;
+  border: dashed 0.0625rem $border-color;
+  font-size: smaller;
+
+  b {
+    color: $highlight-color;
+  }
+}

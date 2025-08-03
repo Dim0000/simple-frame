@@ -1,0 +1,11 @@
+.pagination__item {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.3125em;
+  background: $background-base-color;
+
+  &:hover {
+    color: $background-surface-color;
+    background: $highlight-color;
+  }
+}

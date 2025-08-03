@@ -1,0 +1,19 @@
+.content {
+  a {
+    font-weight: 700;
+    color: $highlight-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.post__thumbnail {
+  max-width: 64.375rem;
+  margin: 0 0 1.25rem;
+}
+
+.post__thumbnail img {
+  width: 100%;
+}
