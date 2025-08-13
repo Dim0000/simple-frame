@@ -1,6 +1,6 @@
 <div class="widget-search widget">
     <h2 class="widget__title">{{ T "recent_title" | default "Search" }}</h2>
-    <form action="/search" class="widget__content">
+    <form action="{{ "search" | relURL }}" class="widget__content">
         <input name="keyword" size="15" autocomplete="off" required placeholder="Search..." />
     </form>
 </div>

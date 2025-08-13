@@ -4,7 +4,7 @@
     <select onChange="location.href=value;">
       <option>{{ T "archives_select_month" | default "Select Month" }}</option>
       {{ range $items := .Site.Taxonomies.archives.Alphabetical.Reverse }}
-      <option value="/archives/{{ .Name | urlize | lower }}">{{ .Name }} ({{ .Count }})</option>
+      <option value="{{ (printf "archives/%s" (.Name | urlize | lower)) | relURL }}">{{ .Name }} ({{ .Count }})</option>
       {{ end }}
     </select>
   </div>
