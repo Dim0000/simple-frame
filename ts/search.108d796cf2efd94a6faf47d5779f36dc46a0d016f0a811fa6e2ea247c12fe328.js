@@ -1,14 +1,20 @@
 (() => {
   // <stdin>
-  var params = new URLSearchParams(window.location.search);
-  var keyword = params.get("keyword") || "";
-  var input = document.getElementById("searchInput");
-  if (input) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("searchInput");
+    if (!input) {
+      return;
+    }
+    const params = new URLSearchParams(window.location.search);
+    const keyword = params.get("keyword") || "";
     input.value = keyword;
-  }
-  if (keyword.trim()) {
-    search(keyword);
-  }
+    if (keyword.trim()) {
+      search(keyword);
+    }
+    input.addEventListener("keyup", () => {
+      search(input.value);
+    });
+  });
   function search(query) {
     const result = searchData(query);
     const html = createHtml(result);
