@@ -1,3 +1,4 @@
+baseURL = "https://dim0000.github.io/simple-frame/"
 title = "Simple Frame"
 languageCode = "en-us"
 theme = "simple-frame"
