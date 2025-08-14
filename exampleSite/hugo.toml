@@ -4,6 +4,7 @@ theme = "simple-frame"
 
 [permalinks]
   post = "/:contentbasename/"
+  search = "/search/"
 
 [Params]
   Subtitle = "Minimal Hugo theme."
