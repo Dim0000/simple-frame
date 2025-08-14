@@ -6,18 +6,26 @@ interface SearchDataItem {
 
 declare const data: SearchDataItem[];
 
-const params = new URLSearchParams(window.location.search);
-const keyword = params.get("keyword") || "";
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("searchInput") as HTMLInputElement | null;
 
-const input = document.getElementById("searchInput") as HTMLInputElement | null;
+  if (!input) {
+    return;
+  }
 
-if (input) {
+  const params = new URLSearchParams(window.location.search);
+  const keyword = params.get("keyword") || "";
+
   input.value = keyword;
-}
 
-if (keyword.trim()) {
-  search(keyword);
-}
+  if (keyword.trim()) {
+    search(keyword);
+  }
+
+  input.addEventListener("keyup", () => {
+    search(input.value);
+  });
+});
 
 function search(query: string): void {
   const result = searchData(query);
