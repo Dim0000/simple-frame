@@ -12,8 +12,9 @@
   		  </div>
 			{{- end }}
 	  {{- end }}
-    	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-	{{- range $paginator.Pages }}
+  	{{- $pages := cond .IsHome (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) .Pages }}
+  	{{- $paginator := .Paginate $pages }}
+		{{- range $paginator.Pages }}
 			<article class="list__item">
 				{{ partial "post_thumbnail.html" (dict "class" "list" "page" .) }}
 				<header class="list__header">
