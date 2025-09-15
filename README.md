@@ -1,5 +1,8 @@
 # Simple Frame
 
+[![](https://github.com/Dim0000/simple-frame/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/Dim0000/simple-frame/actions/workflows/gh-pages.yml)
+[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dim0000/simple-frame/blob/main/LICENSE)
+
 A minimal and fast Hugo theme for blogs and personal sites.
 
 ## Preview
@@ -17,7 +20,7 @@ A minimal and fast Hugo theme for blogs and personal sites.
 title = "Simple Frame"
 
 [permalinks]
-  post = "/:contentbasename/"
+  search = "/search/"
 
 [Params]
   Subtitle = "Minimal Hugo theme."
