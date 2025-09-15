@@ -4,7 +4,6 @@ languageCode = "en-us"
 theme = "simple-frame"
 
 [permalinks]
-  post = "/:contentbasename/"
   search = "/search/"
 
 [Params]
